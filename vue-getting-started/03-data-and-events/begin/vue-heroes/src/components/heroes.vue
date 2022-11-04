@@ -30,18 +30,18 @@
               <div class="field">
                 <label class="label">cape color</label>
                 <label class="radio" for="color-red">
-                  <input type="radio" id="color-red" value="red" />
+                  <input type="radio" id="color-red" value="red" v-model="hero.capeColour" />
                   red
                 </label>
                 <label class="radio" for="color-blue">
-                  <input type="radio" id="color-blue" value="blue" />
+                  <input type="radio" id="color-blue" value="blue" v-model="hero.capeColour"/>
                   blue
                 </label>
                 <label class="radio" for="color-green">
-                  <input type="radio" id="color-green" value="green" />
+                  <input type="radio" id="color-green" value="green" v-model="hero.capeColour"/>
                   green
                 </label>
-                <div class="color-line"></div>
+                <div class="color-line" :style="{'background-color': hero.capeColour}"></div>
               </div>
               <div class="field">
                 <label for="power">
@@ -60,7 +60,7 @@
               <div class="field">
                 <label class="checkbox" for="active">
                   active
-                  <input type="checkbox" class="is-primary" id="active" :checked="hero.active"/>
+                  <input type="checkbox" class="is-primary" id="active" v-model="hero.active"/>
                 </label>
               </div>
             </div>
